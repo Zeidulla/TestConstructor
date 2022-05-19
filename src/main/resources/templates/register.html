@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:replace="header :: content"></div>
+<div class="regina">
+    <div class="textR"> Регистрация </div>
+    <div class="contentR">
+
+
+        <form class="formReg" th:action="@{/register}" method="post">
+
+            <div class="polya">
+
+                <div class="inputR"><input type="email" name="email" placeholder="E-mail" required></div>
+                <div class="inputR">  <input type="text" name="username" placeholder="Username" required> </div>
+                <div class="inputR"> <input type="password" name="password" placeholder="Password" required> </div>
+                <div class="rolesBlok">
+                    <label> <input class="switchRole" type="radio" checked="checked" name="role" value="user">Пользователь</label>
+                    <label> <input class="switchRole" type="radio" name="role" value="tester"> Тестировщик</label>
+                </div>
+
+
+                <div class="reginaBut"> <input type="submit" value="Register"/></div>
+            </div>
+
+        </form>
+        <div class="spanDiv">
+            <span th:text="${msg}"></span>
+            <span th:text="${error}"></span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
