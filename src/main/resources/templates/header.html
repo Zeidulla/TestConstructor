@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
 </head>
 <body>
-
-
 <div id="header" th:fragment="content" >
     <header th:if="${!#authorization.expression('hasRole(''ROLE_USER'')||hasRole(''ROLE_ADMIN'')||hasRole(''ROLE_TESTER'')')}">
         <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo"  width="50px" height="50px" ></figure>
@@ -14,7 +12,6 @@
         <div class="reg"> <a href="/login">Вход</a></div>
         <div class="reg"> <a href="/register">Регистрация</a></div>
     </header>
-
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_USER'')')}">
         <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="50px" height="50px" ></figure>
@@ -26,7 +23,6 @@
 
             <div> <input class="exit" type="submit" value="Выйти"></div>
         </form>
-
     </header>
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_TESTER'')')}">
@@ -39,7 +35,6 @@
 
             <div> <input class="exit" type="submit" value="Выйти"></div>
         </form>
-
     </header>
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
@@ -52,11 +47,7 @@
 
             <div> <input class="exit" type="submit" value="Выйти"></div>
         </form>
-
     </header>
 </div>
-
-
-
 </body>
 </html>
