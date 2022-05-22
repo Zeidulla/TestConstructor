@@ -28,6 +28,8 @@ header a{
     color: white;
     border: 1px solid white;
     padding: 2px;
+    text-shadow: #00e1ff 0 0 10px;
+        color: #ffffff;
 }
 header a:hover{
     background-color:#ffffff;
@@ -38,7 +40,7 @@ header a:hover{
     font-size: 35px;
     margin-top: 25px;
     margin-left: 10px;
-    margin-right: 930px;
+    margin-right: 810px;
 }
 
 #myTest2{
@@ -46,21 +48,21 @@ header a:hover{
     font-size: 35px;
     margin-top: 25px;
     margin-left: 10px;
-    margin-right: 870px;
+    margin-right: 450px;
 }
 #myTest3{
     height: 40px;
     font-size: 35px;
     margin-top: 25px;
     margin-left: 10px;
-    margin-right: 830px;
+    margin-right: 550px;
 }
 #myTest4{
     height: 40px;
     font-size: 35px;
     margin-top: 25px;
     margin-left: 10px;
-    margin-right: 750px;
+    margin-right: 730px;
 }
 
 
@@ -74,12 +76,14 @@ header a:hover{
     font: inherit;
     width: auto;
     padding: 2px;
-    font-size: 20px;
+    font-size: 21px;
     color: white;
     border:  1px solid white;
     background-color: #12067f;
     outline: none;
     display: block;
+    text-shadow: #00e1ff 0 0 10px;
+        color: #ffffff;
 }
 
 .exit:hover{
@@ -108,6 +112,9 @@ header a:hover{
     background-color: white;
     color: #12067f;
     text-align: center;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+                     #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
+                     #cad5e2 5px 5px 0;
 }
 .contentR{
     height: 350px;
@@ -121,27 +128,30 @@ header a:hover{
 
 }
 .polya input{
-    height: 100px;
-    width: 500px;
+    height: 40px;
+    width: 300px;
     padding-left: 15px;
     font-size: 20px;
     margin-top: 10px;
     outline: none;
     color: #12067f;
+    border:  4px solid #12067f;
 }
 .formReg{
-    width: 450px;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 65px;
-    background-color: #12067f;
+    padding-top: 40px;
+    background-color: #ffffff;
+    border:  5px solid #12067f;
 }
 .polya input.switchRole{
     width: 20px;
     height: auto;
 }
 .polya label{
-    font-size: 20px;
+    font-size: 19px;
+    color: #12067f;
 
 
 }
@@ -186,10 +196,11 @@ header a:hover{
     margin-left: auto;
     text-align: center;
     padding-bottom: 15px;
+    color: #12067f;
 }
 #recover a{
     text-decoration: none;
-    color: white;
+    color:#12067f
 }
 
 /*Админ Таблица-----------testList------------------*/
@@ -202,6 +213,9 @@ header a:hover{
     background-color: white;
     color: #12067f;
     text-align: center;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+                     #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
+                     #cad5e2 5px 5px 0;
 }
 .underlinetxt{
     color: white;
@@ -274,7 +288,8 @@ header a:hover{
     font-size: 40px;
     text-transform: uppercase;
     text-align: center;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid #12067f;
+    color: #12067f;
 }
 #kabinet{
     width: 800px;
@@ -282,7 +297,7 @@ header a:hover{
 #kabinet .inputR{
     font-size: 30px;
     margin-top: 5px;
-
+    color: #12067f;
 }
 #get{
     margin-top: 10px;
@@ -291,7 +306,7 @@ header a:hover{
 
 .changePass{
     width: 218px;
-    color: white;
+    color: #12067f;
 }
 #kabinet .polya{
     height: auto;
@@ -420,6 +435,7 @@ header a:hover{
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
+    color: #12067f;
 }
 #NameHead{
     font-size: 60px;
@@ -442,6 +458,7 @@ header a:hover{
     width: 380px;
     margin-left: auto;
     margin-right: auto;
+    color: #12067f;
 }
 #tests .reginaBut{
     margin-top: 0px;

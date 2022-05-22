@@ -47,4 +47,11 @@ public class MainController {
         model.addAttribute("tests", testList);
         return "timer";
     }
+
+    @GetMapping("/helper")
+    public String helper(Model model) {
+        return "helper";
+    }
+
+
 }
