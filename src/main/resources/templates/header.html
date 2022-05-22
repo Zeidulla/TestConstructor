@@ -7,7 +7,7 @@
 <body>
 <div id="header" th:fragment="content" >
     <header th:if="${!#authorization.expression('hasRole(''ROLE_USER'')||hasRole(''ROLE_ADMIN'')||hasRole(''ROLE_TESTER'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo"  width="50px" height="50px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo"  width="70px" height="70px" ></figure>
         <div id="myTest1"> <a href="/">Тест Конструктор</a></div>
         <div class="reg"> <a href="/login">Вход</a></div>
         <div class="reg"> <a href="/register">Регистрация</a></div>
@@ -15,9 +15,9 @@
 
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_USER'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="50px" height="50px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="70px" height="70px" ></figure>
         <div id="myTest2"> <a href="/">Тест Конструктор</a>
-            <div class="underlinetxt">Пользователь</div></div>
+            <div class="underlinetxt"></div></div>
         <div class="reg"> <a href="/">Тесты</a></div>
         <div class="reg"><a href="/find">Поиск</a></div>
         <div class="reg"><a href="/results">Мои результаты</a></div>
@@ -31,9 +31,9 @@
     </header>
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_TESTER'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="50px" height="50px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="70px" height="70px" ></figure>
         <div id="myTest3"> <a href="/">Тест Конструктор</a>
-            <div class="underlinetxt">Тестировщик</div></div>
+            <div class="underlinetxt"></div></div>
         <div class="reg"> <a href="/test/list">Мои тесты</a></div>
         <div class="reg"><a href="/find">Поиск</a></div>
         <div class="reg"><a href="/timer">Таймер</a></div>
@@ -47,9 +47,9 @@
     </header>
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="50px" height="50px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="70px" height="70px" ></figure>
         <div id="myTest4"> <a href="/">Тест Конструктор</a>
-            <div class="underlinetxt">Администратор</div></div>
+            <div class="underlinetxt"></div></div>
         <div class="reg"> <a href="/admin">Администрирование</a></div>
         <div class="reg"><a href="/profile">Профиль</a></div>
         <form class="form" th:action="@{/logout}" method="post">

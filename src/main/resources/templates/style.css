@@ -37,32 +37,32 @@ header a:hover{
 }
 #myTest1{
     height: 40px;
-    font-size: 35px;
-    margin-top: 25px;
+    font-size: 45px;
+    margin-top: 28px;
     margin-left: 10px;
-    margin-right: 810px;
+    margin-right: 740px;
 }
 
 #myTest2{
     height: 40px;
-    font-size: 35px;
-    margin-top: 25px;
+    font-size: 45px;
+    margin-top: 28px;
     margin-left: 10px;
-    margin-right: 450px;
+    margin-right: 400px;
 }
 #myTest3{
     height: 40px;
-    font-size: 35px;
-    margin-top: 25px;
+    font-size: 45px;
+    margin-top: 28px;
     margin-left: 10px;
-    margin-right: 550px;
+    margin-right: 460px;
 }
 #myTest4{
     height: 40px;
-    font-size: 35px;
-    margin-top: 25px;
+    font-size: 45px;
+    margin-top: 28px;
     margin-left: 10px;
-    margin-right: 730px;
+    margin-right: 650px;
 }
 
 
@@ -76,7 +76,7 @@ header a:hover{
     font: inherit;
     width: auto;
     padding: 2px;
-    font-size: 21px;
+    font-size: 22px;
     color: white;
     border:  1px solid white;
     background-color: #12067f;
@@ -391,7 +391,6 @@ header a:hover{
     font-size: 20px;
     padding: 5px 15px;
     border: 2px solid #12067f;
-    border-radius: 10px;
     margin-top: 30px;
     outline: none;
 }
