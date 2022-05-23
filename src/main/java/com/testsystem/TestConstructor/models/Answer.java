@@ -40,8 +40,8 @@ public class Answer {
     }
     public TypePatternQuestions.Question getQuestion() {/* нужно проверить! */
         return question;
-    }
+    }/* нужно проверить! */
     public void setQuestion(TypePatternQuestions.Question question) {/* нужно проверить! */
         this.question = question;
-    }
+    }/* нужно проверить! */
 }
