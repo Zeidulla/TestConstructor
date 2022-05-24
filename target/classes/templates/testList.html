@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/static/style.css">
+  <meta charset="UTF-8">
+  <title>Мои тесты</title>
+</head>
+<body>
+<div th:replace="header :: content"></div>
+<div class = "forTable">
+  <div class="shapka" th:text="'Тесты ' + ${user.getUsername()}"></div>
+  <table>
+    <thead>
+    <tr id="thead"><th>Название</th><th>Результаты</th><th>Изменение</th><th>Удаление</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="test: ${user.getTest()}">
+      <td ><a  th:text="${test.getName()}" style="color: black"th:href="@{/makeTest/{id}(id=${test.getId()})}"></a></td>
+      <td><a style="color: black"th:href="@{/test/results/{id}(id=${test.getId()})}">Результаты</a></td>
+      <td><a style="color: black"th:href="@{/test/edit/{id}(id=${test.getId()})}">Изменить</a></td>
+      <td><a style="color: black"th:href="@{/test/deleteTest/{id}(id=${test.getId()})}">Удалить</a></td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="createDiv"><a id = 'create' th:href="@{/test/new}">Создать тест</a></div>
+</div>
+</body>
+</html>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
     <meta charset="UTF-8">
     <title>Результат</title>
 </head>
@@ -13,12 +12,17 @@
     <div th:if="${results.size()==0}" class="shapka"> Нет результатов </div>
     <table th:if="${results.size()>0}">
         <thead>
-        <tr id="thead"><th>Пользователь</th><th>Результат</th></tr>
+        <tr id="thead">
+            <th>Пользователь</th>
+            <th>Результат</th>
+
+        </tr>
         </thead>
         <tbody>
         <tr th:each="result : ${results}">
             <td th:text="${result.getUser().getUsername()}"></td>
             <td th:text="${result.getTrueAns()}+'/'+${result.getTest().getQuestion().size()}"></td>
+
         </tr>
         </tbody>
     </table>

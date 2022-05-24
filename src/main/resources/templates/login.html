@@ -12,11 +12,13 @@
   <div class="textR">Авторизация</div>
   <div class="contentR">
 
+
     <form class="formReg" th:action="@{/login}" method="post">
 
       <div class="polya">
-        <div class="inputR"><input type="text" name="username" placeholder="Username" required></div>
-        <div class="inputR">  <input type="password" name="password" placeholder="Password" required> </div>
+
+        <div class="inputR"><input type="text" name="username" placeholder="Логин" required></div>
+        <div class="inputR">  <input type="password" name="password" placeholder="Пароль" required> </div>
         <div class="reginaBut"> <input type="submit" value="Войти"/></div>
         <div id="recover"> <a href="/recoverPass">Восстановить пароль</a></div>
       </div>
@@ -24,7 +26,7 @@
     </form>
     <div class="spanDiv">
       <span th:if="${param.error}">Данные введены неверно!</span>
-      <span th:if="${param.logout}">Данные введены верно!</span>
+      <span th:if="${param.logout}">Данные успешно введены!</span>
       <span th:if="${recover}" th:text="${recover}"></span>
     </div>
   </div>

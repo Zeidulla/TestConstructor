@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
     <meta charset="UTF-8">
     <title>Главная страница</title>
 </head>
@@ -14,13 +14,16 @@
     <table th:if="${tests.size()>0}">
         <thead>
         <tr id="thead">
-            <th>Название</th><th>Описание</th>
+            <th>Название</th>
+            <th>Описание</th>
         </tr>
         </thead>
         <tbody>
         <tr th:if="${test.isPublish()}" th:each="test: ${tests}">
+
             <td ><a  th:text="${test.getName()}" style="color: black"th:href="@{/makeTest/{id}(id=${test.getId()})}"></a></td>
             <td th:text="${test.getDescription()}"></td>
+
         </tr>
         </tbody>
     </table>

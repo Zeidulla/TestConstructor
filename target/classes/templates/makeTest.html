@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/static/style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:replace="header :: content"></div>
+<div class="regina">
+    <input th:value="${test.getQuestion().size()}" type="hidden" id="size" >
+    <input th:value="${test.getId()}" type="hidden" id="testID" >
+
+    <div class="textR" id='NameHead' th:text="${test.getName()}"></div>
+    <div class="textR" id='descripHead'th:text="${test.getDescription()}"></div>
+
+   <div class="formReg" id="tests">
+       <div class="polya">
+
+       <div th:each="quest: ${test.getQuestion()}">
+           <div class="question" hidden="true" th:id="'q'+${questStat.index}" th:text="${quest.getQuestion()}"></div>
+           <div th:id="'ans'+${questStat.index}" hidden="true">
+               <div class="Answer" th:each="answer, i: ${quest.getAnswer()}">
+                   <input  class="switchRole" type="radio" th:name="'answer'+${questStat.index}" th:value="${i.index}"><div class="textAnsw" th:text="${answer.getAnswer()}"> </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="reginaBut" id="delreg" ><input id="butt" type="button" onclick="checkans()" value="Начать тестировние"></div>
+           <form id="formAnswers" th:action="'/makeTest/'+${test.getId()}" method="post"></form>
+   </div>
+   </div>
+</div>
+
+<script src="/makeTest.js"></script>
+</body>
+</html>

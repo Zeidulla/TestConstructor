@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/templates/style.css">
     <meta charset="UTF-8">
 </head>
 <body>
 <div id="header" th:fragment="content" >
     <header th:if="${!#authorization.expression('hasRole(''ROLE_USER'')||hasRole(''ROLE_ADMIN'')||hasRole(''ROLE_TESTER'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo"  width="70px" height="70px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo"  width="85px" height="85px" ></figure>
         <div id="myTest1"> <a href="/">Тест Конструктор</a></div>
         <div class="reg"> <a href="/login">Вход</a></div>
         <div class="reg"> <a href="/register">Регистрация</a></div>
@@ -15,7 +15,7 @@
 
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_USER'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="70px" height="70px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="85px" height="85px" ></figure>
         <div id="myTest2"> <a href="/">Тест Конструктор</a>
             <div class="underlinetxt"></div></div>
         <div class="reg"> <a href="/">Тесты</a></div>
@@ -31,7 +31,7 @@
     </header>
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_TESTER'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="70px" height="70px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="85px" height="85px" ></figure>
         <div id="myTest3"> <a href="/">Тест Конструктор</a>
             <div class="underlinetxt"></div></div>
         <div class="reg"> <a href="/test/list">Мои тесты</a></div>
@@ -47,7 +47,7 @@
     </header>
 
     <header th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
-        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="70px" height="70px" ></figure>
+        <figure> <img src="https://i.imgur.com/Q2PdQsR.png" alt="Company logo" width="85px" height="85px" ></figure>
         <div id="myTest4"> <a href="/">Тест Конструктор</a>
             <div class="underlinetxt"></div></div>
         <div class="reg"> <a href="/admin">Администрирование</a></div>

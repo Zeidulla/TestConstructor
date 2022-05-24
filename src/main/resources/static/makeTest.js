@@ -1,10 +1,13 @@
+
 let index=-1;
 let arr =[];
 let q;
 let ansh;
 let size = document.getElementById('size').value;
 let testId = document.getElementById('testID').value;
-function checkans(){
+function checkans()
+{
+
 
     if(index==-1){
         index++;

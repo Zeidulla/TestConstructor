@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
   <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
-  <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/static/style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <meta charset="UTF-8">
   <title>Профиль</title>
 </head>
 <body>
@@ -10,13 +11,15 @@
 <div class="regina" id="kabinet">
   <div class="textR" >Профиль</div>
   <div class="contentR">
+
+
     <form class="formReg" th:action="@{/login}" method="post">
 
       <div class="polya">
         <div class="sh" th:text="${user.getUsername()}"> </div>
         <div class="inputR"> Электронная почта:</div>
         <div class="inputR"  id = "get" th:text="${user.getEmail()}"></div>
-        <div class="inputR"> Уровень пользователя:</div>
+        <div class="inputR"> Уровень:</div>
         <div class="inputR" id = "get" th:if="${user.getRole().get(0).getName()=='ROLE_USER'}"> Пользователь</div>
         <div class="inputR" id = "get" th:if="${user.getRole().get(0).getName()=='ROLE_TESTER'}"> Тестировщик </div>
         <div class="inputR" id = "get" th:if="${user.getRole().get(0).getName()=='ROLE_ADMIN'}"> Администратор</div>
