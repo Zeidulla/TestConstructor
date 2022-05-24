@@ -1,18 +1,17 @@
 package com.testsystem.TestConstructor.models;
 
-import org.aspectj.weaver.patterns.TypePatternQuestions;
-
 import javax.persistence.*;
 
 @Entity
 public class Answer {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String answer;
+    private String answer; //Сохраняет ответ (строка)
 
-    private boolean flag;
+    private boolean flag;  //логическое значение для проверки правильности ответа
 
     @ManyToOne
     private Question question;
@@ -50,9 +49,9 @@ public class Answer {
 
     public Question getQuestion() {
         return question;
-    }//????
+    }
 
     public void setQuestion(Question question) {
         this.question = question;
-    }//????
+    }
 }

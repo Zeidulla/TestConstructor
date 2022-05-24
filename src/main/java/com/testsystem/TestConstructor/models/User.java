@@ -11,7 +11,7 @@ import java.util.List;
 @Entity     //поля класса имеют отображение в БД, Table(name = «t_user») указывает с какой именно таблицей
 public class User implements UserDetails {        //Alt+Insert автоматическое заполнение геттеров, сеттеров и тд
     @Id      //GenerationType.IDENTITY параметр IDENTITY значит, что генерацией id будет заниматься БД.
-    @GeneratedValue(strategy = GenerationType.AUTO) //вариант – AUTO, hibernate сам выберет из одну стратегий
+    @GeneratedValue(strategy = GenerationType.AUTO) //вариант – AUTO, hibernate сам выберет из одну стратегий:
     private Long id;         //SEQUENCE – использует встроенный в базы данных, такие как PostgreSQL или Oracle, механизм генерации последовательных значений (sequence)
     //TABLE – используется отдельная таблица с проинициализированным значениями ключей
     private String username;

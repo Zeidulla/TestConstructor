@@ -1,22 +1,21 @@
 package com.testsystem.TestConstructor.models;
 
-import org.aspectj.weaver.patterns.TypePatternQuestions;
 
 import javax.persistence.*;
-import javax.xml.transform.Result;
 import java.util.List;
 
 @Entity
-public class Test { /* сделаю пометку */
+public class Test {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String name; //название теста
 
-    private String description;
+    private String description; //описание теста
 
-    private boolean publish;
+    private boolean publish; //логическое значение для приватности теста
 
     @ManyToOne
     private User user;
@@ -33,7 +32,9 @@ public class Test { /* сделаю пометку */
         this.description = description;
         this.publish=false;
     }
-    public Test(){}
+    public Test(){
+
+    }
 
     public Long getId() {
         return id;
@@ -97,4 +98,3 @@ public class Test { /* сделаю пометку */
         this.result.add(result);
     }
 }
-
