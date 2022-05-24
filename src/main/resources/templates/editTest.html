@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/templates/style.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+<div th:replace="header :: content"></div>
+<div class="shapka" id ='shapkaEdit'>Изменение теста</div>
+<div class="testEdit">
+  <div class="contentTest">
+    <div class="nameTest" th:text="${test.getName()}"></div>
+    <div  class="descTest" th:text="${test.getDescription()}"></div>
+    <div th:if="!${test.isPublish()}" class="publicBut">  <a th:href="'/test/edit/publish/'+${test.getId()}">Опубликовать</a> </div>
+
+  </div>
+ <div class="quests">
+   <div class="forTable">
+     <table>
+       <thead>
+       <tr id="thead">
+         <th>Вопрос</th><th>Удалить</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr th:each="question : ${test.getQuestion()}">
+         <td style="width: 100px" ><textarea th:text="${question.getQuestion()}" readonly></textarea> </td>
+         <td><a style="color: black"th:href="@{/test/edit/deleteQuestion/{id}(id=${question.getId()})}">Удалить</a></td>
+       </tr>
+       </tbody>
+     </table>
+     <div class="createDiv"><a id = 'create' th:href="@{/test/edit/newQuestion/{id}(id=${test.getId()})}">Добавить вопрос</a></div>
+
+   </div>
+
+ </div>
+
+</div>
+
+
+</body>
+</html>

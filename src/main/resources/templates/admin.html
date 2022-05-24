@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="/TestConstructor/src/main/resources/templates/style.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+<div th:replace="header :: content"></div>
+<div class="forTable">
+  <div class="shapka"> Администрирование </div>
+  <table>
+    <thead>
+    <tr id="thead">
+      <th>ID</th><th>Электронная почта</th><th>Имя</th><th>Роль</th><th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+      <td th:text="${user.getId()}"></td>
+      <td th:text="${user.getEmail()}"></td>
+      <td th:text="${user.getUsername()}"></td>
+      <td th:text="${user.getRole().get(0).getName()}"></td>
+      <td><a th:if="${user.getRole().get(0).getName()!='ROLE_ADMIN'}" th:href="@{delete-user/{id}(id=${user.getId()})}">Удалить</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+
