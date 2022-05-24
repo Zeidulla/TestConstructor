@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background: #12067f;
+    display: flex;
+    flex-direction: row;
+
+}
+
+      figure{
+        margin-left: 10px;
+        margin-top: 17px;
+        padding: 0px;
+     }
+
+.form{
+    width: auto;
+    margin-top: 34px;
+    margin-left: 15px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 2px;
+    text-shadow: #00e1ff 0 0 10px;
+        color: #ffffff;
+}
+header a:hover{
+    background-color:#ffffff;
+    color: #12067f;
+}
+#myTest1{
+    height: 40px;
+    font-size: 45px;
+    margin-top: 28px;
+    margin-left: 10px;
+    margin-right: 740px;
+}
+
+#myTest2{
+    height: 40px;
+    font-size: 45px;
+    margin-top: 28px;
+    margin-left: 10px;
+    margin-right: 400px;
+}
+#myTest3{
+    height: 40px;
+    font-size: 45px;
+    margin-top: 28px;
+    margin-left: 10px;
+    margin-right: 460px;
+}
+#myTest4{
+    height: 40px;
+    font-size: 45px;
+    margin-top: 28px;
+    margin-left: 10px;
+    margin-right: 650px;
+}
+
+
+.reg{
+    width: auto;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+.exit{
+    font: inherit;
+    width: auto;
+    padding: 2px;
+    font-size: 22px;
+    color: white;
+    border:  1px solid white;
+    background-color: #12067f;
+    outline: none;
+    display: block;
+    text-shadow: #00e1ff 0 0 10px;
+        color: #ffffff;
+}
+
+.exit:hover{
+    background-color:white;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+/*Логин и регистрация--------------------------------------------------*/
+.regina{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.textR{
+    font-weight: bold ;
+    height: 150px;
+    font-size: 80px;
+    width: auto;
+    border-bottom: white;
+    background-color: white;
+    color: #12067f;
+    text-align: center;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+                     #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
+                     #cad5e2 5px 5px 0;
+}
+.contentR{
+    height: 350px;
+}
+.polya{
+    width: 450px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+
+}
+.polya input{
+    height: 40px;
+    width: 300px;
+    padding-left: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+    outline: none;
+    color: #12067f;
+    border:  4px solid #12067f;
+}
+.formReg{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    background-color: #ffffff;
+    border:  5px solid #12067f;
+}
+.polya input.switchRole{
+    width: 20px;
+    height: auto;
+}
+.polya label{
+    font-size: 19px;
+    color: #12067f;
+
+
+}
+.inputR{
+    width: 319px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rolesBlok{
+    margin-top: 10px;
+    width: 285px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.reginaBut{
+    width: 300px;
+    margin-top: 30px;
+    padding-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.polya .reginaBut input{
+    width: 300px;
+    padding-left: 5px;
+    color: #12067f;
+    cursor: pointer;
+}
+.spanDiv{
+    width: 350px;
+    color: #12067f;
+    font-size: 30px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+#recover{
+    margin-top: -15px;
+    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 15px;
+    color: #12067f;
+}
+#recover a{
+    text-decoration: none;
+    color:#12067f
+}
+
+/*Админ Таблица-----------testList------------------*/
+.shapka{
+    font-weight: bold ;
+    height: 150px;
+    font-size: 80px;
+    width: auto;
+    border-bottom: white;
+    background-color: white;
+    color: #12067f;
+    text-align: center;
+    text-shadow: #cad5e2 1px 1px 0, #cad5e2 2px 2px 0,
+                     #cad5e2 3px 3px 0, #cad5e2 4px 4px 0,
+                     #cad5e2 5px 5px 0;
+}
+.underlinetxt{
+    color: white;
+    font-size: 15px;
+    width: 75px;
+    margin-top: 8px;
+    margin-left: 80px;
+}
+.underlinetxt:hover{
+    color: white;
+    font-size: 15px;
+    width: 75px;
+    margin-top: 8px;
+    margin-left: 80px;
+}
+.forTable{
+    margin-top: 80px;
+    width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.forTable table{
+    width: 800px;
+    border: 1px;
+    background-color: #12067f;
+    margin: 5%;
+}
+
+#thead {
+    height: 30px;
+    font-size: 20px;
+    background-color:#12067f;
+    color: white;
+    border-color: #12067f;
+}
+.forTable tr{
+    background-color: white;
+    text-align: center;
+
+}
+.forTable td{
+    height: 30px;
+    font-size: 20px;
+}
+.createDiv{
+    font-size: 25px;
+    margin-top: 15px;
+    width: 148px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+#create{
+    width: 148px;
+    text-decoration: none;
+    color: #12067f;
+    border: 1px solid #12067f;
+    padding: 5px;
+    background-color:white;
+}
+#create:hover{
+    background-color:#12067f;
+    color: white;
+}
+
+/*Профиль------------------------------------------------------------------*/
+.sh{
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 4px solid #12067f;
+    color: #12067f;
+}
+#kabinet{
+    width: 800px;
+}
+#kabinet .inputR{
+    font-size: 30px;
+    margin-top: 5px;
+    color: #12067f;
+}
+#get{
+    margin-top: 10px;
+    margin-left: 110px;
+}
+
+.changePass{
+    width: 218px;
+    color: #12067f;
+}
+#kabinet .polya{
+    height: auto;
+}
+.changePass:hover{
+    background-color:white;
+    color: #12067f;
+}
+.changeButt{
+    font-size: 30px;
+    margin-top: 15px;
+    width: 219px;
+    margin-left: auto;
+    margin-right: auto;
+   padding-bottom: 20px;
+}
+/*testEdit*/
+.quests textarea{
+    width: 620px;
+    height: auto;
+    resize: none;
+    font-size: 20px;
+    padding: 5px 15px;
+    border: 0px;
+    outline: none;
+}
+.testEdit{
+    display: flex;
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contentTest{
+    width: 500px;
+    max-height: 500px;
+    height: 275px;
+    background-color: #12067f;
+    color: white;
+}
+.nameTest{
+    height: auto;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+}
+.descTest{
+    height: auto;
+
+    font-size: 20px;
+    font-style: italic;
+    padding: 15px;
+}
+
+.quests{
+    margin-left: auto;
+    margin-left: auto;
+}
+.testEdit .createDiv{
+    width: 194px;
+}
+#shapkaEdit{
+    margin-top: 30px;
+}
+.quests .forTable{
+    margin-top: 0px;
+}
+/*Создать тест --------------------------------------------------*/
+.newTest .shapka{
+    margin-top: 30px;
+
+}
+.newTest form{
+    background-color: #12067f;
+    width: auto;
+    border-radius: 10px;
+}
+
+.formReg textarea{
+    width: 288px;
+    height:100px;
+    resize: none;
+    font-size: 20px;
+    padding: 5px 15px;
+    border: 2px solid #12067f;
+    margin-top: 30px;
+    outline: none;
+}
+.inputTest{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.inputTest input{
+    width: 578px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #12067f;
+    outline: none;
+    color: #12067f;
+    font-weight: bold;
+
+}
+#newQe{
+    width: 400px;
+}
+#answer .inputR{
+    display: flex;
+}
+#answer .switchRole{
+    margin-top: 70px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+}
+#newQe .polya{
+    width: 400px;
+}
+#descripHead{
+    font-size: 40px;
+    height: auto;
+    margin-bottom: 25px;
+}
+.question{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #12067f;
+}
+#NameHead{
+    font-size: 60px;
+}
+#tests .switchRole{
+    display: inline-block;
+    margin-left:20px;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: auto;
+    margin-top: auto;
+
+}
+.Answer{
+    display: flex;
+}
+.textAnsw{
+    font-size: 20px;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #12067f;
+}
+#tests .reginaBut{
+    margin-top: 0px;
+    width: 220px;
+
+}
+#tests #butt{
+    width: 220px;
+}
+#formAnswers{
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: auto;
+}
+.publicBut a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+.publicBut a:hover{
+    background-color:white;
+    color: #12067f;
+}
+.publicBut{
+    width: 132px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+
+
+
+
+
+

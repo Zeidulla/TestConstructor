@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="shortcut icon" href="https://i.imgur.com/Q2PdQsR.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<div th:replace="header :: content"></div>
+<div class="regina">
+    <div class="textR"> Регистрация </div>
+    <div class="contentR">
+
+
+        <form class="formReg" th:action="@{/register}" method="post">
+
+            <div class="polya">
+
+                <div class="inputR"><input type="email" name="email" placeholder="Электронная почта" required></div>
+                <div class="inputR">  <input type="text" name="username" placeholder="Логин" required> </div>
+                <div class="inputR"> <input type="password" name="password" placeholder="Пароль" required> </div>
+                <div class="rolesBlok">
+                    <label> <input class="switchRole" type="radio" checked="checked" name="role" value="user">Пользователь</label>
+                    <label> <input class="switchRole" type="radio" name="role" value="tester"> Тестировщик</label>
+                    <label> <input class="switchRole" type="radio" name="role" value="admin"> Администратор</label>
+                </div>
+
+
+                <div class="reginaBut"> <input type="submit" value="Зарегистрироваться"/></div>
+            </div>
+
+        </form>
+        <div class="spanDiv">
+            <span th:text="${msg}"></span>
+            <span th:text="${error}"></span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
