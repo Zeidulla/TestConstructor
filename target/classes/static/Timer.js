@@ -1,41 +1,43 @@
-//Мы должны уменьшать таймер после каждой секунды, чтобы сделать это,.
-//мы собираемся создать функцию Javascript, которая будет сначала вызываться при загрузке страницы теста,
-//а затем мы будем вызывать эту функцию рекурсивно после каждой секунды для обратного отсчета времени
-var tim;
- var min = '${sessionScope.min}';
- var sec = '${sessionScope.sec}';
- var f = new Date();
 
- function customSubmit(someValue){ 
- document.questionForm.minute.value = min; 
- document.questionForm.second.value = sec; 
- document.questionForm.submit(); 
- } 
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
 
- function examTimer() {
- if (parseInt(sec) >0) {
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
 
- document.getElementById("showtime").innerHTML = "Time Remaining :"+min+" Minutes ," + sec+" Seconds";
- sec = parseInt(sec) - 1; 
- tim = setTimeout("examTimer()", 1000);
- }
- else {
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
 
- if (parseInt(min)==0 && parseInt(sec)==0){
- document.getElementById("showtime").innerHTML = "Time Remaining :"+min+" Minutes ," + sec+" Seconds";
- alert("Time Up");
- document.questionForm.minute.value=0;
- document.questionForm.second.value=0;
- document.questionForm.submit();
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
- }
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
 
- if (parseInt(sec) == 0) { 
- document.getElementById("showtime").innerHTML = "Time Remaining :"+min+" Minutes ," + sec+" Seconds"; 
- min = parseInt(min) - 1;
- sec=59;
- tim = setTimeout("examTimer()", 1000);
- }
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
 
- }
- }
+var deadline="January 01 2018 00:00:00 GMT+0300";
+var deadline = new Date(Date.parse(new Date()) + 1 * 3 * 30 * 60 * 1000); // for endless timer
+initializeClo
