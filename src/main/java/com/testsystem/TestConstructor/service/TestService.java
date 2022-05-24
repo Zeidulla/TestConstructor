@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class TestService {
+
     @Autowired
     TestRepository testRepository;
 
@@ -87,7 +88,7 @@ public class TestService {
         }
     }
 
-    public int getResult(Long testId, List<Long> answers) {
+    public int getResult(Long testId, List<Long> answers) { //https://translated.turbopages.org/proxy_u/en-ru.ru.d04ce047-628d0c98-35956d8c-74722d776562/https/www.edureka.co/blog/creating-an-online-quiz-application-using-jsp-servlet/
         int result=0;
         Test test = testRepository.findById(testId).get();
         for (int i = 0; i < answers.size(); i++) {

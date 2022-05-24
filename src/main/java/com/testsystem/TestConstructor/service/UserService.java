@@ -1,5 +1,7 @@
 package com.testsystem.TestConstructor.service;
 
+//UserService. Содержит методы для бизнес-логики приложения. Этот класс реализует интерфейс UserDetailsService
+
 import com.testsystem.TestConstructor.models.Role;
 import com.testsystem.TestConstructor.models.User;
 import com.testsystem.TestConstructor.repository.ResultRepository;
@@ -17,7 +19,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
 
     @Autowired
     EmailService emailService;
@@ -39,7 +41,7 @@ public class UserService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserDetails u =(UserDetails)  userRepository.findByUsername(username);
+        UserDetails u =(UserDetails)  userRepository.findByUsername(username); //смотрим найден ли пользователь в базе данных
         if(u == null) {
             throw new UsernameNotFoundException("Пользователь не найден");
         } else {
