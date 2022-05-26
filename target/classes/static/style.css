@@ -171,6 +171,18 @@ header a:hover{
     padding-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
+    margin:45px auto;
+        height: 34px;
+        line-height: 39px;
+        text-align: center;width: 320px;
+            background: linear-gradient(to bottom, #ffffff, #12067f) repeat scroll 0 0 / 100% 200% rgba(0, 0, 0, 0);
+        transition: all 0.5s linear 0s;
+            border-bottom: 4px solid #fff;
+
+
+}
+.reginaBut:hover,.reginaBut:focus{
+    background-position: 0 -102%;
 }
 .polya .reginaBut input{
     width: 300px;

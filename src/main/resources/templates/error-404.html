@@ -6,6 +6,10 @@
 </head>
 <body>
 <div th:replace="header :: content"></div>
-<div class="textR">Вам не доступна эта страница! :(</div>
+           <th:block layout:fragment="content">
+           <h1>Page not found</h1>
+           <a href="/">Go Home</a>
+</th:block>
+
 </body>
 </html>
